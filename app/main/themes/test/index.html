@@ -1,0 +1,7 @@
+<h1>hello,test</h1>
+
+<ol>
+{% for a in get_articles(categorys='', tags = '', orderby='asc',is_page=True).items %}
+<li>{{a}}</li>
+{% endfor %}
+</ol>

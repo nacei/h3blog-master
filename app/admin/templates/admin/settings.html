@@ -1,0 +1,168 @@
+{% extends 'admin/common/base.html' %}
+{% block content %}
+<form class="col-8 pt-2" method="POST">
+    {{ form.hidden_tag() }}
+    <div class="form-group row">
+        <label for="h3blog_domain" class="col-sm-3 col-form-label">网站域名:</label>
+        <div class="col-sm-9">
+            {{form.h3blog_domain(class="form-control")}}
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="h3blog_title" class="col-sm-3 col-form-label">网站名称:</label>
+        <div class="col-sm-9">
+            {{form.h3blog_title(class="form-control")}}
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="h3blog_keywords" class="col-sm-3 col-form-label">关键字:</label>
+        <div class="col-sm-9">
+            {{form.h3blog_keywords(class="form-control")}}
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="h3blog_description" class="col-sm-3 col-form-label">网站描述:</label>
+        <div class="col-sm-9">
+            {{form.h3blog_description(class="form-control")}}
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label for="h3blog_comment" class="col-sm-3 col-form-label">开启评论:</label>
+        <div class="col-sm-9">
+            {{form.h3blog_comment(class="form-control")}}
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label for="h3blog_register_invitecode" class="col-sm-3 col-form-label">开启邀请注册:</label>
+        <div class="col-sm-9">
+            {{form.h3blog_register_invitecode(class="form-control")}}
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label for="h3blog_editor" class="col-sm-3 col-form-label">默认编辑器:</label>
+        <div class="col-sm-9">
+            {{form.h3blog_editor(class="form-control")}}
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label for="h3blog_template" class="col-sm-3 col-form-label">模板:</label>
+        <div class="col-sm-9">
+            {{form.h3blog_template(class="form-control")}}
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label for="h3blog_upload_type" class="col-sm-3 col-form-label">图片存储方式:</label>
+        <div class="col-sm-9">
+            {{form.h3blog_upload_type(class="form-control")}}
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label for="h3blog_allowed_image_extensions" class="col-sm-3 col-form-label">允许图片后缀:</label>
+        <div class="col-sm-9">
+            {{form.h3blog_allowed_image_extensions(class="form-control")}}
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label for="qiniu_cdn_url" class="col-sm-3 col-form-label">七牛cdn网址:</label>
+        <div class="col-sm-9">
+            {{form.qiniu_cdn_url(class="form-control")}}
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label for="qiniu_bucket_name" class="col-sm-3 col-form-label">七牛bucket:</label>
+        <div class="col-sm-9">
+            {{form.qiniu_bucket_name(class="form-control")}}
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label for="qiniu_access_key" class="col-sm-3 col-form-label">七牛accessKey:</label>
+        <div class="col-sm-9">
+            {{form.qiniu_access_key(class="form-control")}}
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label for="qiniu_secret_key" class="col-sm-3 col-form-label">七牛secretKey:</label>
+        <div class="col-sm-9">
+            {{form.qiniu_secret_key(class="form-control")}}
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label for="baidu_push_token" class="col-sm-3 col-form-label">百度推送token:</label>
+        <div class="col-sm-9">
+            {{form.baidu_push_token(class="form-control")}}
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label for="sitemap_url_scheme" class="col-sm-3 col-form-label">sitemap协议:</label>
+        <div class="col-sm-9">
+            {{form.sitemap_url_scheme(class="form-control")}}
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label for="h3blog_tongji_script" class="col-sm-3 col-form-label">网站统计脚本:</label>
+        <div class="col-sm-9">
+            {{form.h3blog_tongji_script(class="form-control")}}
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label for="h3blog_extend_meta" class="col-sm-3 col-form-label">网站META:</label>
+        <div class="col-sm-9">
+            {{form.h3blog_extend_meta(class="form-control")}}
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label for="h3blog_robots" class="col-sm-3 col-form-label">robots:</label>
+        <div class="col-sm-9">
+            {{form.h3blog_robots(class="form-control")}}
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label for="alipay_appid" class="col-sm-3 col-form-label">{{form.alipay_appid.label}}:</label>
+        <div class="col-sm-9">
+            {{form.alipay_appid(class="form-control")}}
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label for="alipay_public_key" class="col-sm-3 col-form-label">{{form.alipay_public_key.label}}:</label>
+        <div class="col-sm-9">
+            {{form.alipay_public_key(class="form-control")}}
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label for="alipay_private_key" class="col-sm-3 col-form-label">{{form.alipay_private_key.label}}:</label>
+        <div class="col-sm-9">
+            {{form.alipay_private_key(class="form-control")}}
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="alipay_notify_url" class="col-sm-3 col-form-label">{{form.alipay_notify_url.label}}:</label>
+        <div class="col-sm-9">
+            {{form.alipay_notify_url(class="form-control")}}
+        </div>
+    </div>
+    
+    <div class="form-group row">
+        <div class="col-sm-10">
+            {{form.submit(class='btn btn-primary')}}
+        </div>
+    </div>
+</form>
+{% endblock %}
